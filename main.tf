@@ -37,6 +37,9 @@ resource "aws_security_group" "main" {
 
   tags = merge(
     local.common_tags,
-    { Name = "${var.env}-alb-${var.subnets_name}-alb" }
+    { Name = "${var.env}-${var.subnets_name}-alb" }
   )
   }
+  
+  
+  
