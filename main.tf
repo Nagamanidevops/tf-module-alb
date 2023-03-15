@@ -28,7 +28,7 @@ resource "aws_security_group" "main" {
   
   resource "aws_lb" "main" {
   name               = "${var.env}-${var.subnets_name}-alb"
-  internal           = module.internal
+  internal           = var.internal
   load_balancer_type = "application"
   security_groups    = [aws_security_group.main.id]
   subnets            = var.subnet_ids
