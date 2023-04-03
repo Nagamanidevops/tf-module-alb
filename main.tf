@@ -41,9 +41,9 @@ resource "aws_security_group" "main" {
   )
   }
   
-  resource "aws_lb" "front_end" {
-  # ...
-}
+#   resource "aws_lb" "front_end" {
+#   # ...
+# }
 
 resource "aws_lb_listener" "backend" {
   count = var.internal ? 1 : 0
